@@ -1,0 +1,30 @@
+<head>
+  <title>Model Association Example</title>
+</head>
+
+<body>
+  {{> companyList}}
+</body>
+
+<template name="companyList">
+  <h2>Companies ({{companyCount}})</h2>
+  {{#each companies}}
+    <ul class="companies">
+      <li>{{name}}</li>
+        {{#if hasProjects }}
+        <li>
+          <h3>Projects  ({{projectCount}})</h3>
+          <ul class="projects">
+          {{> projectList getProjects}}
+          </ul>
+        </li>
+        {{/if}}
+    </ul>
+  {{/each}}
+</template>
+
+<template name="projectList">
+  {{#each this}}
+    <li>{{name}}</li>
+  {{/each}}
+</template>

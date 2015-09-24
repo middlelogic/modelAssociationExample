@@ -1,0 +1,12 @@
+body {
+  font-family: Arial, sans-serif;
+}
+ul {
+  list-style: none;
+}
+ul.companies {
+  border-left: 6px blue solid;
+}
+ul.projects {
+  border-left: 6px orange solid;
+}
